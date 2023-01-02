@@ -39,5 +39,12 @@ namespace CAR_PARK
         {
             Application.Exit();
         }
+
+        private void btnSatisListele_Click(object sender, EventArgs e)
+        {
+            frmSatis satis=new frmSatis();
+            satis.ShowDialog();
+        }
+
     }
 }

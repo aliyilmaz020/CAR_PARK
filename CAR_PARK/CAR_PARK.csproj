@@ -76,6 +76,12 @@
     <Compile Include="frmMarka.Designer.cs">
       <DependentUpon>frmMarka.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSatis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSatis.Designer.cs">
+      <DependentUpon>frmSatis.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSeri.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMarka.resx">
       <DependentUpon>frmMarka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSatis.resx">
+      <DependentUpon>frmSatis.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSeri.resx">
       <DependentUpon>frmSeri.cs</DependentUpon>

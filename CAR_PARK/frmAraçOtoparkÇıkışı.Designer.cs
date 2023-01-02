@@ -51,7 +51,7 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.txtRenk = new System.Windows.Forms.TextBox();
+            this.txtPlaka = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.lblToplamTutar = new System.Windows.Forms.Label();
             this.lblSüre = new System.Windows.Forms.Label();
@@ -61,7 +61,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAraçÇıkışı = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label15 = new System.Windows.Forms.Label();
@@ -234,7 +234,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.label10);
-            this.groupBox2.Controls.Add(this.txtRenk);
+            this.groupBox2.Controls.Add(this.txtPlaka);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.comboParkYeri);
             this.groupBox2.Controls.Add(this.label9);
@@ -261,16 +261,16 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(306, 173);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(39, 16);
+            this.label10.Size = new System.Drawing.Size(42, 16);
             this.label10.TabIndex = 19;
-            this.label10.Text = "Renk";
+            this.label10.Text = "Plaka";
             // 
-            // txtRenk
+            // txtPlaka
             // 
-            this.txtRenk.Location = new System.Drawing.Point(365, 168);
-            this.txtRenk.Name = "txtRenk";
-            this.txtRenk.Size = new System.Drawing.Size(121, 22);
-            this.txtRenk.TabIndex = 18;
+            this.txtPlaka.Location = new System.Drawing.Point(365, 168);
+            this.txtPlaka.Name = "txtPlaka";
+            this.txtPlaka.Size = new System.Drawing.Size(121, 22);
+            this.txtPlaka.TabIndex = 18;
             // 
             // groupBox3
             // 
@@ -366,14 +366,15 @@
             this.label11.TabIndex = 0;
             this.label11.Text = "Geliş Tarihi";
             // 
-            // button1
+            // btnAraçÇıkışı
             // 
-            this.button1.Location = new System.Drawing.Point(187, 430);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(119, 23);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Araç Çıkışı";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnAraçÇıkışı.Location = new System.Drawing.Point(187, 430);
+            this.btnAraçÇıkışı.Name = "btnAraçÇıkışı";
+            this.btnAraçÇıkışı.Size = new System.Drawing.Size(119, 23);
+            this.btnAraçÇıkışı.TabIndex = 0;
+            this.btnAraçÇıkışı.Text = "Araç Çıkışı";
+            this.btnAraçÇıkışı.UseVisualStyleBackColor = true;
+            this.btnAraçÇıkışı.Click += new System.EventHandler(this.btnAraçÇıkışı_Click);
             // 
             // button2
             // 
@@ -405,7 +406,7 @@
             this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(653, 479);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAraçÇıkışı);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -447,9 +448,9 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox txtRenk;
+        private System.Windows.Forms.TextBox txtPlaka;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAraçÇıkışı;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label lblToplamTutar;
         private System.Windows.Forms.Label lblSüre;

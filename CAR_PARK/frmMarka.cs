@@ -19,7 +19,7 @@ namespace CAR_PARK
         }
 
           
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-RRM41TI\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -31,6 +31,5 @@ namespace CAR_PARK
             textBox1.Clear();
         }
 
-        
     }
 }

@@ -32,6 +32,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnSatisListele = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button1
@@ -66,7 +67,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(172, 209);
+            this.button4.Location = new System.Drawing.Point(172, 257);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(210, 23);
             this.button4.TabIndex = 3;
@@ -74,12 +75,23 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // btnSatisListele
+            // 
+            this.btnSatisListele.Location = new System.Drawing.Point(172, 219);
+            this.btnSatisListele.Name = "btnSatisListele";
+            this.btnSatisListele.Size = new System.Drawing.Size(210, 23);
+            this.btnSatisListele.TabIndex = 4;
+            this.btnSatisListele.Text = "Satış Listeleme Sayfası";
+            this.btnSatisListele.UseVisualStyleBackColor = true;
+            this.btnSatisListele.Click += new System.EventHandler(this.btnSatisListele_Click);
+            // 
             // frmAnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(566, 450);
+            this.Controls.Add(this.btnSatisListele);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -97,6 +109,7 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSatisListele;
     }
 }
 

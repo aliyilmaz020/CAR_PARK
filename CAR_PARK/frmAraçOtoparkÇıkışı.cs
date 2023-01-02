@@ -18,7 +18,7 @@ namespace CAR_PARK
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection("Data Source=DESKTOP-RRM41TI\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
 
         
 
@@ -78,7 +78,7 @@ namespace CAR_PARK
                 txtSoyad.Text = read["soyad"].ToString();
                 txtMarka.Text = read["marka"].ToString();
                 txtSeri.Text = read["seri"].ToString();
-                txtRenk.Text = read["renk"].ToString();
+                txtPlaka.Text = read["plaka"].ToString();
                 lblGelişTarihi.Text = read["tarih"].ToString();
             }
             baglanti.Close();
@@ -96,6 +96,43 @@ namespace CAR_PARK
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblÇıkışTarihi.Text=DateTime.Now.ToString();
+        }
+
+        private void btnAraçÇıkışı_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("DELETE FROM araç_otopark_kaydı where plaka='"+txtPlaka.Text+"'", baglanti);
+            komut.ExecuteNonQuery();
+            SqlCommand komut2 = new SqlCommand("UPDATE araçdurumu set durumu='BOŞ' where parkyeri='" + txtParkYeri2.Text + "'", baglanti);
+            komut2.ExecuteNonQuery();
+            SqlCommand komut3 = new SqlCommand("INSERT INTO satis(parkyeri,plaka,geliş_tarihi,çıkış_tarihi,süre,tutar) values(@parkyeri,@plaka,@geliş_tarihi,@çıkış_tarihi,@süre,@tutar)", baglanti);
+            
+            komut3.Parameters.AddWithValue("@parkyeri",txtParkYeri2.Text);
+            komut3.Parameters.AddWithValue("@plaka", txtPlaka.Text);
+            komut3.Parameters.AddWithValue("@geliş_tarihi", lblGelişTarihi.Text);
+            komut3.Parameters.AddWithValue("@çıkış_tarihi", lblÇıkışTarihi.Text);
+            komut3.Parameters.AddWithValue("@süre", double.Parse(lblSüre.Text));
+            komut3.Parameters.AddWithValue("@tutar", double.Parse(lblToplamTutar.Text));
+
+            komut3.ExecuteNonQuery();
+
+            baglanti.Close();
+            MessageBox.Show("Araç çıkışı yapıldı.");
+           
+            foreach(Control item in groupBox2.Controls)
+            {
+                if (item is TextBox)
+                {
+                    item.Text = "";
+                    txtParkYeri.Text = "";
+                    comboParkYeri.Text = "";
+                    comboPlaka.Text = "";
+                }
+            }
+            comboPlaka.Items.Clear();
+            comboParkYeri.Items.Clear();
+            DoluYerler();
+            Plakalar();
         }
     }
 }
