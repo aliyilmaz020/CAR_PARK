@@ -70,6 +70,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmMarka";
             this.Text = "frmMarka";
+//            this.Load += new System.EventHandler(this.frmMarka_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

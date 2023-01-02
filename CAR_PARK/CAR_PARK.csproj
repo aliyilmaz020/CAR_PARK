@@ -93,6 +93,9 @@
     <EmbeddedResource Include="frmAraçOtoparkYerleri.resx">
       <DependentUpon>frmAraçOtoparkYerleri.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAraçOtoparkÇıkışı.resx">
+      <DependentUpon>frmAraçOtoparkÇıkışı.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmMarka.resx">
       <DependentUpon>frmMarka.cs</DependentUpon>
     </EmbeddedResource>
