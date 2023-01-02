@@ -22,10 +22,57 @@ namespace CAR_PARK
 
         private void frmAraçOtoparkYerleri_Load(object sender, EventArgs e)
         {
-            int sayac = 1;
-            foreach(Control item in Controls)
+            BoşParkYerleri();
+            DoluParkYerleri();
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("Select *from araç_otopark_kaydı", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+
+            while (read.Read())
             {
-                if(item is Button)
+                foreach (Control item in Controls)
+                {
+                    if (item is Button)
+                    {
+                        if (item.Text == read["parkyeri"].ToString())
+                        {
+                            item.Text = read["plaka"].ToString();
+                        }
+                    }
+                }
+            }
+            baglanti.Close();
+
+        }
+
+        private void DoluParkYerleri()
+        {
+            baglanti.Open();
+            SqlCommand komut = new SqlCommand("Select *from araçdurumu", baglanti);
+            SqlDataReader read = komut.ExecuteReader();
+
+            while (read.Read())
+            {
+                foreach (Control item in Controls)
+                {
+                    if (item is Button)
+                    {
+                        if (item.Text == read["parkyeri"].ToString() && read["durumu"].ToString() == "DOLU")
+                        {
+                            item.BackColor = Color.Red;
+                        }
+                    }
+                }
+            }
+            baglanti.Close();
+        }
+
+        private void BoşParkYerleri()
+        {
+            int sayac = 1;
+            foreach (Control item in Controls)
+            {
+                if (item is Button)
                 {
                     item.Text = "P-" + sayac;
                     item.Name = "P-" + sayac;
@@ -34,9 +81,6 @@ namespace CAR_PARK
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
