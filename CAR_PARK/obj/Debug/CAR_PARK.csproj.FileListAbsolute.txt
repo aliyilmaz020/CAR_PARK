@@ -1,0 +1,34 @@
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\bin\Debug\CAR_PARK.exe.config
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\bin\Debug\CAR_PARK.exe
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\bin\Debug\CAR_PARK.pdb
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.csproj.AssemblyReference.cache
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.csproj.SuggestedBindingRedirects.cache
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.frmAnaSayfa.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.frmAraçOtoparkKaydı.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.frmAraçOtoparkYerleri.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.frmAraçOtoparkÇıkışı.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.frmMarka.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.frmSatis.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.frmSeri.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.Properties.Resources.resources
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.csproj.GenerateResource.cache
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.csproj.CoreCompileInputs.cache
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.exe
+C:\Users\ali_y\Downloads\Compressed\Yeni klasör\CAR_PARK-master\CAR_PARK-master\CAR_PARK\obj\Debug\CAR_PARK.pdb
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\bin\Debug\CAR_PARK.exe.config
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\bin\Debug\CAR_PARK.exe
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\bin\Debug\CAR_PARK.pdb
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.csproj.AssemblyReference.cache
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.csproj.SuggestedBindingRedirects.cache
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.frmAnaSayfa.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.frmAraçOtoparkKaydı.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.frmAraçOtoparkYerleri.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.frmAraçOtoparkÇıkışı.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.frmMarka.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.frmSatis.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.frmSeri.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.Properties.Resources.resources
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.csproj.GenerateResource.cache
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.csproj.CoreCompileInputs.cache
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.exe
+C:\Users\ali_y\Desktop\Car_park\CAR_PARK\obj\Debug\CAR_PARK.pdb

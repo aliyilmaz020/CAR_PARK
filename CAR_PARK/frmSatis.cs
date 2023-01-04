@@ -17,7 +17,7 @@ namespace CAR_PARK
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=arac_otopark;Integrated Security=True");
         DataSet daset = new DataSet();
 
         private void frmSatis_Load(object sender, EventArgs e)
@@ -30,7 +30,7 @@ namespace CAR_PARK
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("SELECT sum(tutar) from satis", baglanti);
-            label1.Text = "Toplam Tutar=" + komut.ExecuteScalar() + "TL";
+            label1.Text = komut.ExecuteScalar() + "TL";
             baglanti.Close();
         }
 
@@ -42,5 +42,7 @@ namespace CAR_PARK
             dataGridView1.DataSource = daset.Tables["satis"];
             baglanti.Close();
         }
+
+       
     }
 }

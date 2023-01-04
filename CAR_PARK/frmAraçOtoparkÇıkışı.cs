@@ -18,7 +18,7 @@ namespace CAR_PARK
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=arac_otopark;Integrated Security=True");
 
         
 
@@ -32,7 +32,7 @@ namespace CAR_PARK
         private void Plakalar()
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * from araç_otopark_kaydı", baglanti);
+            SqlCommand komut = new SqlCommand("Select * from arac_otopark_kaydi", baglanti);
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
@@ -44,7 +44,7 @@ namespace CAR_PARK
         private void DoluYerler()
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * from araçdurumu WHERE durumu='DOLU'", baglanti);
+            SqlCommand komut = new SqlCommand("Select * from aracdurumu WHERE durumu='DOLU'", baglanti);
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
@@ -56,7 +56,7 @@ namespace CAR_PARK
         private void comboPlaka_SelectedIndexChanged(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * from araç_otopark_kaydı WHERE plaka='"+comboPlaka.SelectedItem+"'", baglanti);
+            SqlCommand komut = new SqlCommand("Select * from arac_otopark_kaydi WHERE plaka='"+comboPlaka.SelectedItem+"'", baglanti);
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
@@ -68,7 +68,7 @@ namespace CAR_PARK
         private void comboParkYeri_SelectedIndexChanged(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select * from araç_otopark_kaydı WHERE parkyeri='" + comboParkYeri.SelectedItem + "'", baglanti);
+            SqlCommand komut = new SqlCommand("Select * from arac_otopark_kaydi WHERE parkyeri='" + comboParkYeri.SelectedItem + "'", baglanti);
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
@@ -101,17 +101,17 @@ namespace CAR_PARK
         private void btnAraçÇıkışı_Click(object sender, EventArgs e)
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("DELETE FROM araç_otopark_kaydı where plaka='"+txtPlaka.Text+"'", baglanti);
+            SqlCommand komut = new SqlCommand("DELETE FROM arac_otopark_kaydi where plaka='"+txtPlaka.Text+"'", baglanti);
             komut.ExecuteNonQuery();
-            SqlCommand komut2 = new SqlCommand("UPDATE araçdurumu set durumu='BOŞ' where parkyeri='" + txtParkYeri2.Text + "'", baglanti);
+            SqlCommand komut2 = new SqlCommand("UPDATE aracdurumu set durumu='BOŞ' where parkyeri='" + txtParkYeri2.Text + "'", baglanti);
             komut2.ExecuteNonQuery();
-            SqlCommand komut3 = new SqlCommand("INSERT INTO satis(parkyeri,plaka,geliş_tarihi,çıkış_tarihi,süre,tutar) values(@parkyeri,@plaka,@geliş_tarihi,@çıkış_tarihi,@süre,@tutar)", baglanti);
+            SqlCommand komut3 = new SqlCommand("INSERT INTO satis(parkyeri,plaka,gelis_tarihi,cikis_tarihi,sure,tutar) values(@parkyeri,@plaka,@gelis_tarihi,@cikis_tarihi,@sure,@tutar)", baglanti);
             
             komut3.Parameters.AddWithValue("@parkyeri",txtParkYeri2.Text);
             komut3.Parameters.AddWithValue("@plaka", txtPlaka.Text);
-            komut3.Parameters.AddWithValue("@geliş_tarihi", lblGelişTarihi.Text);
-            komut3.Parameters.AddWithValue("@çıkış_tarihi", lblÇıkışTarihi.Text);
-            komut3.Parameters.AddWithValue("@süre", double.Parse(lblSüre.Text));
+            komut3.Parameters.AddWithValue("@gelis_tarihi", lblGelişTarihi.Text);
+            komut3.Parameters.AddWithValue("@cikis_tarihi", lblÇıkışTarihi.Text);
+            komut3.Parameters.AddWithValue("@sure", double.Parse(lblSüre.Text));
             komut3.Parameters.AddWithValue("@tutar", double.Parse(lblToplamTutar.Text));
 
             komut3.ExecuteNonQuery();

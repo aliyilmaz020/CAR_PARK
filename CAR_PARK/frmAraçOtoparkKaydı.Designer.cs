@@ -32,19 +32,19 @@
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtSoyad = new System.Windows.Forms.TextBox();
             this.txtTelefon = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
             this.comboMarka = new System.Windows.Forms.ComboBox();
             this.comboSeri = new System.Windows.Forms.ComboBox();
             this.comboParkYeri = new System.Windows.Forms.ComboBox();
             this.txtRenk = new System.Windows.Forms.TextBox();
             this.txtPlaka = new System.Windows.Forms.TextBox();
             this.grupKişi = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.grupAraç = new System.Windows.Forms.GroupBox();
+            this.btnSeri = new System.Windows.Forms.Button();
+            this.btnMarka = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -52,8 +52,6 @@
             this.label10 = new System.Windows.Forms.Label();
             this.btnKayit = new System.Windows.Forms.Button();
             this.btnİptal = new System.Windows.Forms.Button();
-            this.btnMarka = new System.Windows.Forms.Button();
-            this.btnSeri = new System.Windows.Forms.Button();
             this.grupKişi.SuspendLayout();
             this.grupAraç.SuspendLayout();
             this.SuspendLayout();
@@ -85,13 +83,6 @@
             this.txtTelefon.Name = "txtTelefon";
             this.txtTelefon.Size = new System.Drawing.Size(100, 22);
             this.txtTelefon.TabIndex = 3;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(94, 134);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(100, 22);
-            this.txtEmail.TabIndex = 4;
             // 
             // comboMarka
             // 
@@ -134,7 +125,6 @@
             // 
             // grupKişi
             // 
-            this.grupKişi.Controls.Add(this.label5);
             this.grupKişi.Controls.Add(this.label4);
             this.grupKişi.Controls.Add(this.label3);
             this.grupKişi.Controls.Add(this.label2);
@@ -143,22 +133,12 @@
             this.grupKişi.Controls.Add(this.txtTc);
             this.grupKişi.Controls.Add(this.txtAd);
             this.grupKişi.Controls.Add(this.txtTelefon);
-            this.grupKişi.Controls.Add(this.txtEmail);
             this.grupKişi.Location = new System.Drawing.Point(39, 52);
             this.grupKişi.Name = "grupKişi";
-            this.grupKişi.Size = new System.Drawing.Size(200, 215);
+            this.grupKişi.Size = new System.Drawing.Size(280, 215);
             this.grupKişi.TabIndex = 12;
             this.grupKişi.TabStop = false;
             this.grupKişi.Text = "Kişi Bilgileri";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(15, 140);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(45, 16);
-            this.label5.TabIndex = 18;
-            this.label5.Text = "E-mail";
             // 
             // label4
             // 
@@ -210,12 +190,32 @@
             this.grupAraç.Controls.Add(this.comboSeri);
             this.grupAraç.Controls.Add(this.txtRenk);
             this.grupAraç.Controls.Add(this.comboParkYeri);
-            this.grupAraç.Location = new System.Drawing.Point(318, 52);
+            this.grupAraç.Location = new System.Drawing.Point(347, 52);
             this.grupAraç.Name = "grupAraç";
             this.grupAraç.Size = new System.Drawing.Size(300, 215);
             this.grupAraç.TabIndex = 13;
             this.grupAraç.TabStop = false;
             this.grupAraç.Text = "Araç Bilgileri";
+            // 
+            // btnSeri
+            // 
+            this.btnSeri.Location = new System.Drawing.Point(258, 87);
+            this.btnSeri.Name = "btnSeri";
+            this.btnSeri.Size = new System.Drawing.Size(27, 23);
+            this.btnSeri.TabIndex = 24;
+            this.btnSeri.Text = "+";
+            this.btnSeri.UseVisualStyleBackColor = true;
+            this.btnSeri.Click += new System.EventHandler(this.btnSeri_Click);
+            // 
+            // btnMarka
+            // 
+            this.btnMarka.Location = new System.Drawing.Point(258, 54);
+            this.btnMarka.Name = "btnMarka";
+            this.btnMarka.Size = new System.Drawing.Size(27, 23);
+            this.btnMarka.TabIndex = 16;
+            this.btnMarka.Text = "+";
+            this.btnMarka.UseVisualStyleBackColor = true;
+            this.btnMarka.Click += new System.EventHandler(this.btnMarka_Click);
             // 
             // label6
             // 
@@ -280,26 +280,7 @@
             this.btnİptal.TabIndex = 15;
             this.btnİptal.Text = "İptal";
             this.btnİptal.UseVisualStyleBackColor = true;
-            // 
-            // btnMarka
-            // 
-            this.btnMarka.Location = new System.Drawing.Point(258, 54);
-            this.btnMarka.Name = "btnMarka";
-            this.btnMarka.Size = new System.Drawing.Size(27, 23);
-            this.btnMarka.TabIndex = 16;
-            this.btnMarka.Text = "+";
-            this.btnMarka.UseVisualStyleBackColor = true;
-            this.btnMarka.Click += new System.EventHandler(this.btnMarka_Click);
-            // 
-            // btnSeri
-            // 
-            this.btnSeri.Location = new System.Drawing.Point(258, 87);
-            this.btnSeri.Name = "btnSeri";
-            this.btnSeri.Size = new System.Drawing.Size(27, 23);
-            this.btnSeri.TabIndex = 24;
-            this.btnSeri.Text = "+";
-            this.btnSeri.UseVisualStyleBackColor = true;
-            this.btnSeri.Click += new System.EventHandler(this.btnSeri_Click);
+//            this.btnİptal.Click += new System.EventHandler(this.btnİptal_Click);
             // 
             // frmAraçOtoparkKaydı
             // 
@@ -328,14 +309,12 @@
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtSoyad;
         private System.Windows.Forms.TextBox txtTelefon;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.ComboBox comboMarka;
         private System.Windows.Forms.ComboBox comboSeri;
         private System.Windows.Forms.ComboBox comboParkYeri;
         private System.Windows.Forms.TextBox txtRenk;
         private System.Windows.Forms.TextBox txtPlaka;
         private System.Windows.Forms.GroupBox grupKişi;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

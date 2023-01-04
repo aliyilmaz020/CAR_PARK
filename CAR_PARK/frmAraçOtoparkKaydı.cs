@@ -18,14 +18,24 @@ namespace CAR_PARK
         {
             InitializeComponent();
         }
-        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
-
+        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=arac_otopark;Integrated Security=True");
+        ErrorProvider errorProviderTc = new ErrorProvider();
         private void frmAraçOtoparkKaydı_Load(object sender, EventArgs e)
         {
+            TCKontrol();
             BoşAraçlar();
             Marka();
         }
 
+        private void TCKontrol()
+        {
+            if (txtTc.Text.Length != 11)
+            {
+                errorProviderTc.SetError(txtTc, "T.C. Kimlik Numarası 11 Haneli Olmalıdır");
+            }
+
+
+        }
         private void Marka()
         {
             baglanti.Open();
@@ -41,7 +51,7 @@ namespace CAR_PARK
         private void BoşAraçlar()
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select *from araçdurumu WHERE durumu='BOŞ'", baglanti);
+            SqlCommand komut = new SqlCommand("Select *from aracdurumu WHERE durumu='BOŞ'", baglanti);
             SqlDataReader read = komut.ExecuteReader();
             while (read.Read())
             {
@@ -59,13 +69,12 @@ namespace CAR_PARK
         {
             baglanti.Open();
             SqlCommand komut = new SqlCommand("insert into " +
-                "araç_otopark_kaydı(tc,ad,soyad,telefon,email,plaka,marka,seri,renk,parkyeri,tarih) " +
-                "values(@tc,@ad,@soyad,@telefon,@email,@plaka,@marka,@seri,@renk,@parkyeri,@tarih)", baglanti);
+                "arac_otopark_kaydi(tc,ad,soyad,telefon,plaka,marka,seri,renk,parkyeri,tarih) " +
+                "values(@tc,@ad,@soyad,@telefon,@plaka,@marka,@seri,@renk,@parkyeri,@tarih)", baglanti);
             komut.Parameters.AddWithValue("@tc", txtTc.Text);
             komut.Parameters.AddWithValue("@ad", txtAd.Text);
             komut.Parameters.AddWithValue("@soyad", txtSoyad.Text);
             komut.Parameters.AddWithValue("@telefon", txtTelefon.Text);
-            komut.Parameters.AddWithValue("@email", txtEmail.Text);
             komut.Parameters.AddWithValue("@plaka", txtPlaka.Text);
             komut.Parameters.AddWithValue("@marka",comboMarka.Text);
             komut.Parameters.AddWithValue("@seri", comboSeri.Text);
@@ -75,12 +84,22 @@ namespace CAR_PARK
             
             komut.ExecuteNonQuery();
 
-            SqlCommand komut2 = new SqlCommand("update araçdurumu set durumu = 'DOLU' where parkyeri='" + 
-                comboParkYeri.SelectedItem + "'", baglanti);
-            komut2.ExecuteNonQuery();
-            
+            if (txtTc.Text.Length != 11)
+            {
+                MessageBox.Show("11 Haneli Olmalı");
+                
+            }
+            else
+            {
+                SqlCommand komut2 = new SqlCommand("update aracdurumu set durumu = 'DOLU' where parkyeri='" +
+                    comboParkYeri.SelectedItem + "'", baglanti);
+                komut2.ExecuteNonQuery();
+
+                baglanti.Close();
+                MessageBox.Show("Araç Kaydı Oluşturuldu", "Kayıt");
+            }
+
             baglanti.Close();
-            MessageBox.Show("Araç Kaydı Oluşturuldu", "Kayıt");
             comboParkYeri.Items.Clear();
             BoşAraçlar();
             comboMarka.Items.Clear();
@@ -130,5 +149,7 @@ namespace CAR_PARK
             baglanti.Close();
 
         }
+
+        
     }
 }

@@ -18,14 +18,14 @@ namespace CAR_PARK
             InitializeComponent();
         }
 
-        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=araç_otopark;Integrated Security=True");
+        SqlConnection baglanti = new SqlConnection("Data Source=.\\SQLEXPRESS;Initial Catalog=arac_otopark;Integrated Security=True");
 
         private void frmAraçOtoparkYerleri_Load(object sender, EventArgs e)
         {
             BoşParkYerleri();
             DoluParkYerleri();
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select *from araç_otopark_kaydı", baglanti);
+            SqlCommand komut = new SqlCommand("Select *from arac_otopark_kaydi", baglanti);
             SqlDataReader read = komut.ExecuteReader();
 
             while (read.Read())
@@ -48,7 +48,7 @@ namespace CAR_PARK
         private void DoluParkYerleri()
         {
             baglanti.Open();
-            SqlCommand komut = new SqlCommand("Select *from araçdurumu", baglanti);
+            SqlCommand komut = new SqlCommand("Select *from aracdurumu", baglanti);
             SqlDataReader read = komut.ExecuteReader();
 
             while (read.Read())
